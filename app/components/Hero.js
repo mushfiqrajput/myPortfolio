@@ -35,15 +35,15 @@ export default function Hero() {
         />
       </ShaderBackground>
 
-      <motion.div className="relative z-10 max-w-6xl mx-auto w-full">
+      <motion.div className="relative z-10 max-w-6xl mx-auto w-full min-w-0">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: EASE }}
-          className="font-mono text-xs uppercase tracking-[0.3em] text-[var(--text-tertiary)] mb-8 flex items-center"
+          className="font-mono text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[var(--text-tertiary)] mb-8 flex items-center flex-wrap"
         >
           <span className="pulse-dot" />
-          Freelance & contract · Available now
+          Freelance &amp; contract · Available now
         </motion.p>
 
         <motion.div

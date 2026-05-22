@@ -67,30 +67,30 @@ export default async function CaseStudy({ params }) {
                 ← Back to work
               </Link>
 
-              <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.25em] text-[var(--text-tertiary)] mb-6">
-                <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+              <div className="flex items-center flex-wrap gap-x-3 gap-y-2 font-mono text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[var(--text-tertiary)] mb-6">
+                <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] shrink-0" />
                 <span>{project.year} · {project.role}</span>
                 <span className="text-[var(--accent)]">Production · Private</span>
               </div>
 
-              <h1 className="font-display text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.92] max-w-4xl mb-12">
+              <h1 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95] md:leading-[0.92] max-w-4xl mb-10 md:mb-12">
                 {project.title}
               </h1>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border-t border-[var(--border)] divide-x divide-[var(--border)]">
-                <div className="py-5 pr-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6 md:gap-0 border-t border-[var(--border)] md:divide-x md:divide-[var(--border)]">
+                <div className="py-5 md:pr-6">
                   <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)] mb-1.5">Role</p>
                   <p className="text-sm text-[var(--text-primary)]">{project.role.split(" @ ")[0]}</p>
                 </div>
-                <div className="py-5 px-6">
+                <div className="py-5 md:px-6">
                   <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)] mb-1.5">Company</p>
                   <p className="text-sm text-[var(--text-primary)]">Datazoro</p>
                 </div>
-                <div className="py-5 px-6">
+                <div className="py-5 md:px-6">
                   <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)] mb-1.5">Year</p>
                   <p className="text-sm text-[var(--text-primary)]">{project.year}</p>
                 </div>
-                <div className="py-5 pl-6">
+                <div className="py-5 md:pl-6">
                   <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)] mb-2">Stack</p>
                   <div className="flex flex-wrap gap-1.5">
                     {project.tech.map((t) => (
@@ -196,7 +196,7 @@ export default async function CaseStudy({ params }) {
                             className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                           />
                           {s.caption && (
-                            <div className="absolute inset-x-0 bottom-0 px-5 py-4 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                            <div className="hidden md:block absolute inset-x-0 bottom-0 px-5 py-4 bg-gradient-to-t from-black/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                               <p className="font-mono text-[11px] text-white/80">{s.caption}</p>
                             </div>
                           )}
@@ -230,7 +230,7 @@ export default async function CaseStudy({ params }) {
                 <p className="font-mono text-[10px] uppercase tracking-widest text-[var(--text-tertiary)] mb-6">── Next case study</p>
                 <Link
                   href={`/work/${next.slug}`}
-                  className="font-display text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.92] hover:text-[var(--accent)] transition-colors block mb-16"
+                  className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl tracking-tight leading-[0.95] md:leading-[0.92] hover:text-[var(--accent)] transition-colors block mb-10 md:mb-16"
                 >
                   {next.title} →
                 </Link>

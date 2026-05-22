@@ -33,6 +33,9 @@ body {
   background: var(--background);
   color: var(--text-primary);
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  /* never allow sideways scroll — ambient glows + large type must not widen the page */
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 
@@ -157,6 +160,13 @@ body {
 @media (max-width: 767px), (pointer: coarse) {
   .panel {
     min-height: 100vh;
+    /* clip ambient glows so they don't widen the page on mobile */
+    overflow-x: hidden;
+  }
+  /* on mobile the track is a normal vertical stack — no transform offset */
+  .panel-track {
+    transform: none !important;
+    max-width: 100%;
   }
 }
 
